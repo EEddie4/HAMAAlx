@@ -9,7 +9,7 @@ def upper(c, n):
 
 def main():
     for loop in range(122, 96, -1):
-        print(upper(chr(loop), 122 - loop + 1), end="")
+        print("{}".format(upper(chr(loop), 122 - loop + 1)), end="")
 
 
 main()
