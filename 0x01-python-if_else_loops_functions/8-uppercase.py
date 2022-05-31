@@ -10,5 +10,5 @@ def upper(c):
 
 def uppercase(str):
     for loop in str:
-        print(upper(loop), end="")
+        print("{}".format(upper(loop)), end="")
     print("")
