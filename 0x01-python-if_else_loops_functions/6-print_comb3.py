@@ -4,4 +4,4 @@ for u in range(9):
         if u == 8 and d == 9:
             print(f"{u}{d}".format(u, d))
         else:
-            print(f"{u}{d}".format(u, d), end=" ")
+            print(f"{u}{d},".format(u, d), end=" ")
