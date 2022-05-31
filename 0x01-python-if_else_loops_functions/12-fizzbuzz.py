@@ -14,4 +14,4 @@ def fizzbuzz():
         else:
             mot = str(num)
         print(mot, end=" ")
-    print("Buzz")
+    print("Buzz",end="")
