@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10, 10)
 # YOUR CODE HERE
-print(number,end=" ")
+print(number, end=" ")
 if number > 0:
     print("is positive")
 elif number == 0:
