@@ -20,10 +20,10 @@ if __name__ == "__main__":
     if nb == 1:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    elif arg[2] not in signe:
-        print("Unknown operator. Available operators: +, -, * and /")
-        exit(1)
-    else:
+    if nb == 4:
+        if arg[2] not in signe:
+            print("Unknown operator. Available operators: +, -, * and /")
+            exit(1)
         r = getop(int(arg[1]), arg[2], int(arg[3]))
         print("{} {} {} = {}".format(arg[1], arg[2], arg[3], r))
         exit(0)
