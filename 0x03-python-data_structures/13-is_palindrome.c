@@ -10,34 +10,19 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *ptr1, *ptr2, *list_inver, *new;
+	listint_t *s = NULL, *e = NULL, *tmp = NULL;
 
-	ptr1 = *head;
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (0);
-	new->n = ptr1->n;
-	new->next = NULL;
-	list_inver = new;
-
-	ptr1 = ptr1->next;
-	while (ptr1 != NULL)
+	s = *head;
+	while (s != tmp && s != e)
 	{
-		new = malloc(sizeof(listint_t));
-		if (new == NULL)
+		tmp = e;
+		e = s;
+		while (e->next != tmp)
+			e = e->next;
+
+		if (s->n != e->n)
 			return (0);
-		new->next = list_inver;
-		list_inver = new;
-		ptr1 = ptr1->next;
+		s = s->next;
 	}
-
-	ptr1 = *head;
-	ptr2 = list_inver;
-	while (ptr1->n == ptr2->n && ptr1->next != NULL && ptr2->next != NULL)
-	if (ptr1->next != NULL || ptr2->next != NULL)
-		return (0);
-	else if (ptr1->n != ptr2->n)
-		return (0);
-
 	return (1);
 }
