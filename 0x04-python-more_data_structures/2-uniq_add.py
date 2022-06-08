@@ -9,3 +9,5 @@ def uniq_add(my_list=[]):
                 som += n
                 black_list.append(n)
         return(som)
+    else:
+        return(None)
