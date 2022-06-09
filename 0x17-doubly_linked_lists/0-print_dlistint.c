@@ -13,15 +13,15 @@ size_t print_dlistint(const dlistint_t *h)
 	size_t nb = 0;
 	const dlistint_t *ptr;
 
+	/*Recherche de la tete de liste*/
+	while(h->prev != NULL)
+		h = h->prev;
 	ptr = h;
-	if (ptr != NULL)
+	while (ptr != NULL)
 	{
-		while (ptr != NULL)
-		{
-			printf("%d \n", ptr->n);
-			nb++;
-			ptr = ptr->next;
-		}
+		printf("%d \n", ptr->n);
+		nb++;
+		ptr = ptr->next;
 	}
 
 	return (nb);
