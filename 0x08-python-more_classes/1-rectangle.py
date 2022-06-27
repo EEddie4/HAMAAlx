@@ -15,19 +15,6 @@ class Rectangle:
         self._Rectangle__height = height
 
     @property
-    def height(self):
-        """ get the current height of the Rectangle """
-        return(self._Rectangle__height)
-
-    @height.setter
-    def height(self, value):
-        if type(value) is not int:
-            raise TypeError("height must be an integer")
-        if value < 0:
-            raise TypeError("height must be >= 0")
-        self._Rectangle__height = value
-
-    @property
     def width(self):
         """ get the current width of the Rectangle"""
         return(self._Rectangle__width)
@@ -39,3 +26,16 @@ class Rectangle:
         if value < 0:
             raise TypeError("width must be >= 0")
         self._Rectangle__width = value
+
+    @property
+    def height(self):
+        """ get the current height of the Rectangle """
+        return(self._Rectangle__height)
+
+    @height.setter
+    def height(self, value):
+        if type(value) is not int:
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise TypeError("height must be >= 0")
+        self._Rectangle__height = value
