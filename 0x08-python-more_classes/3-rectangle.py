@@ -62,8 +62,9 @@ class Rectangle:
 
     def __str__(self):
         tab = ""
-        for i in range(self._Rectangle__height):
-            for j in range(self._Rectangle__width):
-                tab = tab + "#"
-            tab = tab + "\n"
+        if self._Rectangle__height != 0 and self._Rectangle__width != 0:
+            for i in range(self._Rectangle__height):
+                for j in range(self._Rectangle__width):
+                    tab = tab + "#"
+                tab = tab + "\n"
         return (tab)
