@@ -51,10 +51,14 @@ class Rectangle:
             return (self.width + self.height) * 2
 
     def __str__(self):
-        """Print the rectangle."""
-        if self.width == 0 or self.height == 0:
-            return ""
-        return (((str(self.print_symbol) * self.width) + "\n") * self.height)[:-1]
+        total = ""
+        if self.__height == 0 or self.__width == 0:
+            return total
+        for i in range(self.__height):
+            total += (str(self.print_symbol) * self.__width)
+            if i != self.__height - 1:
+                total += "\n"
+        return total
 
     def __repr__(self):
         """Print the rectangle using eval."""
