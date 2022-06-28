@@ -1,19 +1,11 @@
 #!/usr/bin/python3
-"""
-this projet alx
-"""
+"""A function that adds two integers."""
 
 
 def add_integer(a, b=98):
-    """
-    this function return sum a and b
-    """
-
-    test1 = type(a) == int or type(a) == float
-    test2 = type(b) == int or type(b) == float
-    if test1 and test2:
-        return (a + b)
-    elif test1:
-        raise ValueError("b must be an integer")
-    elif test2:
-        raise ValueError("a must be an integer")
+    """A function that return int(a) + int(b)."""
+    if type(a) is not int and type(a) is not float:
+        raise TypeError("a must be an integer")
+    if type(b) is not int and type(b) is not float:
+        raise TypeError("b must be an integer")
+    return int(a) + int(b)
