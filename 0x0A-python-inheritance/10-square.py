@@ -3,14 +3,14 @@
 Contains the class BaseGemetry
 """
 
-BaseGeometry = __import__('9-rectangle').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
 
 
-class Square(BaseGeometry):
+class Square(Rectangle):
     """ The class empty"""
 
     def __init__(self, size):
-        """raises an exception when called"""
+        """A representation of a square"""
         self.integer_validator("size", size)
         self.__size = size
         super().__init__(size, size)
