@@ -13,6 +13,7 @@ class Square(BaseGeometry):
         """raises an exception when called"""
         self.integer_validator("size", size)
         self.__size = size
+        super().__init__(size, size)
 
     def __str__(self):
         return "[Rectangle] {:d}/{:d}".format(self.__size, self.__size)
