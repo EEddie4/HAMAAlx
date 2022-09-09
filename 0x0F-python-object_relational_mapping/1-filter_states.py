@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+python script that ---
+"""
+
 import sys
 
 if __name__ == "__main__":
