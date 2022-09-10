@@ -17,11 +17,12 @@ if __name__ == "__main__":
         sys.argv[1], str(sys.argv[2]), sys.argv[3]), pool_pre_ping=True)
 
     session = Session(engine)
-    req = select(State)
+    req = select(State).where(State.id == 1)
     result = session.execute(req)
     i = 1
     tab = result.scalars().all()
-    if len(tab) == 0:
+    print(tab)
+    """if len(tab) == 0:
         print("Nothing")
     else:
-        print("1: ", tab[0].name)
+        print("1: ", tab[0].name)"""
