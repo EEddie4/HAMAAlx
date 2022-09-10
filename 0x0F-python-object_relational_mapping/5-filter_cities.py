@@ -21,8 +21,7 @@ if __name__ == "__main__":
         cur = conn.cursor()
         sql = "SELECT cities.name FROM cities INNER \
         JOIN states ON cities.state_id = states.id \
-        WHERE states.name LIKE '{}' ORDER BY \
-        cities.id".format(sys.argv[4])
+        WHERE states.name LIKE '{}'".format(sys.argv[4])
         cur.execute(sql)
         query_rows = cur.fetchall()
         _len = len(query_rows)
