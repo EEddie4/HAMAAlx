@@ -20,9 +20,8 @@ if __name__ == "__main__":
     req = select(State)
     result = session.execute(req)
     i = 1
-    for state_obj in result.scalars():
-        if i == 1:
-            print("{}: {}".format(i, state_obj.name))
-            i += 1
-        else:
-            break
+    tab = result.scalars().all()
+    if len(tab) == 0:
+        print("Nothing")
+    else:
+        print("1: ", tab[0].name)
