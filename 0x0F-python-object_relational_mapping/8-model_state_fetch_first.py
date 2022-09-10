@@ -19,10 +19,8 @@ if __name__ == "__main__":
     session = Session(engine)
     req = select(State).where(State.id == 1)
     result = session.execute(req)
-    i = 1
     tab = result.scalars().all()
-    print(tab)
-    """if len(tab) == 0:
+    if len(tab) == 0:
         print("Nothing")
     else:
-        print("1: ", tab[0].name)"""
+        print("1: ", tab[0].name)
