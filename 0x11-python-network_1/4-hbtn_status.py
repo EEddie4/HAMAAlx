@@ -6,10 +6,10 @@
 
 
 if __name__ == '__main__':
-    from urllib import request
+    import requests
 
     url = "https://alx-intranet.hbtn.io/status"
-    content = request.get(url)
+    content = requests.get(url)
     print("Body response:")
-    print("\t - type: {}".format(type(content)))
-    print("\t - content: {}".format(content))
+    print("\t - type: {}".format(type(content.text)))
+    print("\t - content: {}".format(content.text))
