@@ -4,7 +4,6 @@
 - uses urlib package
 """
 
-
 if __name__ == '__main__':
     from urllib.request import urlopen
     url = "https://alx-intranet.hbtn.io/status"
