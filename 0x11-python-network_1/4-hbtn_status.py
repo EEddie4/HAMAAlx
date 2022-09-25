@@ -6,11 +6,10 @@
 
 
 if __name__ == '__main__':
-    from urllib.request import urlopen
+    from urllib import request
 
     url = "https://alx-intranet.hbtn.io/status"
-    with urlopen(url) as response:
-        content = response.read()
-        print("Body response:")
-        print("\t - type: {}".format(type(content.decode('utf-8'))))
-        print("\t - content: {}".format(content.decode('utf-8')))
+    content = request.get(url)
+    print("Body response:")
+    print("\t - type: {}".format(type(content)))
+    print("\t - content: {}".format(content))
