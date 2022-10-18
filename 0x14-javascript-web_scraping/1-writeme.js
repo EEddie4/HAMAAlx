@@ -1,11 +1,14 @@
 #!/usr/bin/node
 
-const filename = process.argv.slice(2)[0];
-const chaine = process.argv.slice(2)[1];
+const request = require('request');
 const fs = require('fs');
+const url = process.argv[2];
+const filePath = process.argv[3];
 
-fs.writeFile(filename, chaine, (err) => {
+request(url, function (err, response, body) {
   if (err) {
     console.log(err);
+  } else {
+    fs.writeFile(filePath, body, 'utf-8');
   }
 });
